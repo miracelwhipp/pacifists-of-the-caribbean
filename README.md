@@ -16,19 +16,16 @@ As the ships take damage in the course of the game, tokens will be removed from 
   them.
   Also, all actions of the vessel will be less effective the fewer **crew** it has.
 * **hull** tokens represent the integrity of the vessels body. Loosing them will have no effect at first. However,
-  should one vessel lose all its hull tokens, the ship sinks and the game is lost.
+  should one vessel lose all its hull tokens, the ship sinks and all players lose the game.
 
 Place 4 **sea** tiles between each ship. This represents the distance between the ships.
 
 The **captains deck** is created by shuffling the **captain cards**. These hold the actions of the ships whose outcome
 the players want to avoid.
 
-Every player is handed one **players deck** <!-- I am not happy with this name, maybe we should find a good position on 
-military ships that the players have and use this instead of 'player' -->. This is a complete deck with one and only one
-card of every player action there is. Then every player randomly takes 2 cards from their deck and gives one to their
-left
-neighbour and one to their right neighbour. Every player now takes thees cards on their hand. <!-- not sure about 
-the wording here --> Players are not allowed to talk about the content of their hand.
+The **players deck** os created by shuffling the **players cards**. These cards hold the actions the players may 
+execute to undermine the captains actions. Every player gets 3 **players cards** in their hand. Players are not allowed 
+to talk about the content of their hand.
 
 The player that most recently did _not_ partake in any war, gets the **first player** token.
 
@@ -56,10 +53,11 @@ The cards' effects will not be evaluated now. This happens in the **outcome phas
 
 ### Players Phase
 
-Beginning with the **first player** in clockwise order, every player now plays one card from their hand - or does
-nothing.
-Once played the same card cannot be played again. The card played is placed upside down next to either the **starboard**
-or **portside** captains action. The players card will only modify the captains action it is placed next to.
+Beginning with the **first player** in clockwise order, every player now may play one card from their hand.
+
+If a player does not play a card, they draw 3 cards from the **players deck**. Otherwise, they place the card upside 
+down next to either the **starboard** or **portside** captains action. The players card will (in most cases) only affect
+the captains action it is placed next to.
 
 Players are not allowed to comment on what card they played or what card another player should play.
 
@@ -86,14 +84,13 @@ dice as
 **crew** tokens are assigned to that action. Every **5** and **6** rolled counts as one _success_. Count the number
 of _successes_. These are the number of casualties. After every player determined the number of casualties for their
 boarding actions, the casualties are removed from the ships on the side of the boarding actions. Remove casualties first
-from the side facing the ship with the boarding action and from the other side afterwards.
+from the side facing the attacking ship and from the other side afterwards.
 
 Should a ship run out of **crew** tokens now, the players lose the game.
 
 #### Movement Actions
 
-Beginning with the **first player** in clockwise order, the **movement actions** of the ships are executed (**starboard
-**
+Beginning with the **first player** in clockwise order, the **movement actions** of the ships are executed (**starboard**
 before **portside**). For this the player of the ship rolls a number of six sided dice that equals the **crew** tokens
 **assigned** to the movement action. Depending on the number of sails the ship has left, different numbers count as
 _successes_:
