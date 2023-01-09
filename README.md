@@ -197,4 +197,21 @@ If this was the last round of the game, the players win with the sum of **crew**
     * When this card is revealed, immediately replace the affected **captains card** with the next on the **captains
       deck**. 
 
-  
+## Alternative rules
+
+### Alternative movement
+
+If a deterministic way to determine movement distance is wished, one can use the following system:
+
+Depending on the number of sails the ship has left, the ship moves 1 space per full number of crew assigned according 
+to the following table:
+
+| sails | number of crew needed to move one space |
+|-------|-----------------------------------------|
+| 0     | ~ no movement                           |
+| 1     | 6                                       |
+| 2     | 3                                       |
+| 3     | 2                                       |
+| 4     | 1                                       |
+
+Cards that modify the result of the die rolls simply modify the number of sails (treat numbers above 4 as 4 and below 0 as 0).
