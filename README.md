@@ -24,7 +24,7 @@ The **captains deck** is created by shuffling the **captain cards**. These hold 
 the players want to avoid.
 
 The **players deck** os created by shuffling the **players cards**. These cards hold the actions the players may 
-execute to undermine the captains actions. Every player gets 3 **players cards** in their hand. Players are not allowed 
+execute to undermine the captains actions. Every player gets 5 **players cards** in their hand. Players are not allowed 
 to talk about the content of their hand.
 
 The player that most recently did _not_ partake in any war, gets the **first player** token.
