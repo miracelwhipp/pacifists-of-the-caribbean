@@ -46,7 +46,8 @@ place the first card on the **starboard** side of their ship and the second **po
 Both cards are open. <!-- I do not know the english opposite of upside down card -->
 
 Exception: a **side** of the ship where there is no **sea** tile left automatically takes the **boarding combat**
-captain action. <!-- the boarding combat captain action should be printed on the ship cardboard sheet on the place where captain 
+captain action. Do not draw a card in this case. 
+<!-- the boarding combat captain action should be printed on the ship cardboard sheet on the place where captain 
 actions are placed -->
 
 The cards' effects will not be evaluated now. This happens in the **outcome phase**.
@@ -118,7 +119,7 @@ To execute a **Retread Movement** add as many **sea** tiles on the side of the s
 
 These actions are executed simultaneously.
 
-First, For each **artillery action** check whether it will hit something or not: An **artillery action**
+First, for each **artillery action** check whether it will hit something or not: An **artillery action**
 has a **range** and a **spread**. An artillery action hits every ship in the direction of the
 action that is more than **range** and less than **range + spread** **fields** away. A **field** is either a **sea**
 tile or a **ship**.
@@ -128,7 +129,7 @@ If no ship is hit, ignore the action. Otherwise, determine the amount of damage 
 _successes_ is the damage that **every** ship hit by this **artillery action** takes.
 
 Note: Some Artillery cards have an **attack modifier** (-1 or +1). Add this modifier to every die rolled, when 
-determining _successes_ (treat results of 7 or higher as 6).
+determining _successes_ (treat results of 7 or higher as _success_).
 
 After the damage for every **artillery action** is calculated it is applied. For every **artillery action** every ship
 hit removes as many tokens as damage was calculated by this action. The types of token to remove depend on the
@@ -158,7 +159,7 @@ If this was the last round of the game, the players win with the sum of **crew**
 
 * Artillery RANGE, SPREAD, AMMUNITION
 * Attack Movement
-* Retread Movement
+* Retreat Movement
 
 ### Player Actions
 
