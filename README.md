@@ -1,4 +1,4 @@
-# Pacificsts of the Caribbean
+# Pacifists of the Caribbean
 
 A cooperative board game, where you try to omit as many human loss as you can in a 17th century naval battle. The game
 can be played with 3-8 players.
