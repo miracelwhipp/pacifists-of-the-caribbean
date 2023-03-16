@@ -24,10 +24,12 @@ The **captains deck** is created by shuffling the **captain cards**. These hold 
 the players want to avoid.
 
 The **players deck** os created by shuffling the **players cards**. These cards hold the actions the players may 
-execute to undermine the captains actions. Every player gets 5 **players cards** in their hand. Players are not allowed 
+execute to undermine the captains actions. Every player gets 3 **players cards** in their hand. Players are not allowed 
 to talk about the content of their hand.
 
+<!-- 
 The player that most recently did _not_ partake in any war, gets the **first player** token.
+-->
 
 ## Playing the Game
 
@@ -35,40 +37,47 @@ The game consists of 7 rounds. In each round the following phases are executed i
 
 * **captains phase** The captains' actions that try to sink the other boats are revealed
 * **players phase** The players declare their actions in order to prevent that
-* **outcome phase** <!-- better name --> The consequences of the actions are deduced
-* **preparation phase** <!-- better name --> The next round is prepared
+* **resolution phase** The consequences of the actions are deduced
+* **cleanup phase** <!-- better name --> The next round is prepared
 
 ### Captains' Phase
 
-Beginning with the **first player** in clockwise order, every player draws **two** cards from the **captains deck**.
-They
-place the first card on the **starboard** side of their ship and the second **portside**.
-Both cards are open. <!-- I do not know the english opposite of upside down card -->
+Deal **two** cards from the **captains deck** to each player. Place the first card on the **starboard** side of 
+their ship and the second **portside**. Both cards are face up. 
 
 Exception: a **side** of the ship where there is no **sea** tile left automatically takes the **boarding combat**
 captain action. Do not draw a card in this case. 
 <!-- the boarding combat captain action should be printed on the ship cardboard sheet on the place where captain 
 actions are placed -->
 
-The cards' effects will not be evaluated now. This happens in the **outcome phase**.
+The cards' effects will not be evaluated now. This happens in the **resolution phase**.
 
 ### Players Phase
 
-Beginning with the **first player** in clockwise order, every player now may play one card from their hand.
+Now the players may take their turns. There is no specific order to this, however the turns are taken one after the 
+other, not simultaneously. For your first games it is advised to determine one start player and then take turns in 
+clockwise order.  
 
-If a player does not play a card, they draw 3 cards from the **players deck**. Otherwise, they place the card upside 
-down next to either the **starboard** or **portside** captains action. The players card will (in most cases) only affect
-the captains action it is placed next to.
+When taking a turn a player chooses one of 3 options:
+
+  1. Play no card, draw 2 cards
+  2. Play 1 card, draw 1 card
+  3. Play 2 cards, draw no card
+
+When playing cards players place the card upside down next to either the **starboard** or **portside** captains action. 
+The players card will (in most cases) only affect the captains action it is placed next to.
+
+Cards are drawn after cards are played. The cards drawn can earliest be played next round.
 
 Players are not allowed to comment on what card they played or what card another player should play.
 
-### Outcome Phase
+### Resolution Phase
 
 Now the result of all actions are determined. This happens in the following order:
 
 1. crew assignment
-2. boarding combat
-3. movement actions
+2. movement actions
+3. boarding combat
 4. artillery actions
 
 Note that some player cards contradict the rules here. In such cases the cards overrule the general rules.
@@ -78,42 +87,45 @@ Note that some player cards contradict the rules here. In such cases the cards o
 Every player now reveals their player card played and assigns their remaining **crew** tokens to the **starboard**
 and **portside** actions: Half to **starboard**, half to **portside**; reminders to **starboard**.
 
+#### Movement Actions
+
+Resolve **Retread Movements** first, then **Attack Movements**. Resolve different **Retread Movements** in an arbitrary 
+order, as well as **Attack Movements**.
+
+For each movement action, first determine the movement distance. It is the minimum of crew assigned to the action and
+ one plus **sails** tokens the vessel has left. This is the number of **sea** tiles the ship moves.
+
+Example: a movement action has assigned 8 crew and all 4 of its sails left. The distance is min(8, 1 + 4) = 5. The 
+movement action will move the vessel by 5 tiles. 
+
+The direction depends on the exact card: **Attack Movements** will move towards the neighbouring ship on the side the 
+card was played on, while **Retread Movements** will move away from the neighbouring ship on the side the 
+card was played on.
+
+To execute an **Attack Movement** _remove_ as many **sea** tiles on the side of the ship as the movements **distance**. If
+this is more than **sea** tiles exist on this side, ramming occurs (see below).
+
+To execute a **Retread Movement** add as many **sea** tiles on the side of the ship as the movements **distance**.
+
+##### Ramming
+
+Whenever a movement distance is higher than the **sea** tiles present, ramming occurs. The vessels between which the 
+movement occurred take damage to their hull. For every point movement **distance** over the number of **sea** tiles 
+available _before_ executing the movement the players of the affected ships roll one die each. The ships take one **hull** 
+damage for every **4**, **5** and **6** rolled by their player. If one of the ships ran out of **hull** tokens the players
+lose the game.
+
 #### Boarding Combat
 
 These actions are executed simultaneously. For each **boarding combat action** the player on this ship rolls as many
 dice as
-**crew** tokens are assigned to that action. Every **5** and **6** rolled counts as one _success_. Count the number
+**crew** tokens are assigned to that action. Every **4**, **5** and **6** rolled counts as one _success_. Count the number
 of _successes_. These are the number of casualties. After every player determined the number of casualties for their
 boarding actions, the casualties are removed from the ships on the side of the boarding actions. Remove casualties first
 from the side facing the attacking ship and from the other side afterwards.
 
 Should a ship run out of **crew** tokens now, the players lose the game.
 
-#### Movement Actions
-
-Beginning with the **first player** in clockwise order, the **movement actions** of the ships are executed (**starboard**
-before **portside**). For this the player of the ship rolls a number of six sided dice that equals the **crew** tokens
-**assigned** to the movement action. Depending on the number of sails the ship has left, different numbers count as
-_successes_:
-
-| sails | successes |
-|-------|-----------|
-| 0     | 7         |
-| 1     | 6,7       |
-| 2     | 5,6,7     |
-| 3     | 4,5,6,7   |
-| 4     | 3,4,5,6,7 |
-
-Count the number of _successes_. The ship will now move by a number of **sea** tiles equal to the number of _successes_. 
-The direction depends on the exact card: **Attack Movements** will move towards the neighbouring ship on the side the 
-card was played on, while **Retread Movements** will move away from the neighbouring ship on the side the 
-card was played on.
-
-To execute an **Attack Movement** remove as many **sea** tiles on the side of the ship as _successes_ were rolled. If
-more _successes_ were rolled than **sea** tiles exist on this side, remove one **hull** token from the neighbouring ship
-on this side for every _success_ over the number of **sea** tiles.
-
-To execute a **Retread Movement** add as many **sea** tiles on the side of the ship as _successes_ were rolled.
 
 #### Artillery Actions
 
@@ -125,11 +137,10 @@ action that is more than **range** and less than **range + spread** **fields** a
 tile or a **ship**.
 
 If no ship is hit, ignore the action. Otherwise, determine the amount of damage by rolling as many six sided dice as
-**crew** tokens are assigned to this action. Every **5** and **6** rolled counts as one _success_. The number of
+**crew** tokens are assigned to this action. Every **4**, **5** and **6** rolled counts as one _success_. The number of
 _successes_ is the damage that **every** ship hit by this **artillery action** takes.
 
-Note: Some Artillery cards have an **attack modifier** (-1 or +1). Add this modifier to every die rolled, when 
-determining _successes_ (treat results of 7 or higher as _success_).
+Note: Some Artillery cards have an **attack modifier** (-1 or +1). Add this modifier to the number of dies rolled.
 
 After the damage for every **artillery action** is calculated it is applied. For every **artillery action** every ship
 hit removes as many tokens as damage was calculated by this action. The types of token to remove depend on the
@@ -140,16 +151,16 @@ ammunition used by the action:
 * solid: remove **hull** tokens
 * explosive: remove damage from **sails**, **crew** _and_ **hull** tokens
 
-If a ship damaged loses all its **crew** or **hull** tokens, the players lose the game.
+If a ship damaged loses all its **crew** or **hull** tokens, the players lose the game. 
+Excessive chainshot damage that exceeds the ships **sails** tokens has no effect.
 
-#### Preparation Phase
+#### Cleanup Phase
 
 The number of human casualties (**crew** tokens removed by **artillery** and **boarding actions**) this round are
 counted. If it is below the number of players, remove one **sea** tile between every ship. If it is above 2 times the
 number of players add one **sea** tile between every ship.
 
-All cards played and tokens removed are out of the game and placed in the game box. The **first player** gives the
-**first player** token to his **portside** neighbour.
+All cards played and tokens removed are out of the game and placed in the game box. 
 
 If this was the last round of the game, the players win with the sum of **crew** tokens left on the ship.
 
@@ -165,16 +176,14 @@ If this was the last round of the game, the players win with the sum of **crew**
 
 * "The Other Starboard"
     * the captains card changes its direction
-    * artillery shoots in the other direction
-    * attack movement becomes retread movement and vice versa
-* change assignment
+    * It is executed as if it was played on the other side
+      * The crew used is from its original side
+* "This is not your Post"
     * the crew assigned to this action are assigned to the action on the other side
 * demotivate
-    * _successes_ will be one number harder
-    * i.e. evaluate every die as if it rolled a number **one less** than it did
+    * Evaluate action as if there is one less **crew** token assigned
 * There will be Grog
-    * _successes_ will be one number easier
-    * i.e. evaluate every die as if it rolled a number **one higher** than it did
+    * Evaluate action as if there is one more **crew** token assigned
 * further
     * The range of the artillery card is increased by 3
     * no effect on non-artillery actions
@@ -185,31 +194,17 @@ If this was the last round of the game, the players win with the sum of **crew**
     * The crew assigned to this action is halved (rounding down)
 * Both sides
     * The effect of the movement card is applied to both sides of the ship
-    * It will be evaluated as if there is another movement card on the other side
     * No effect on non-movement cards
 * Defect
     * can only be played on boarding-actions
         * instead of producing a casualty, every _success_ of the boarding action will make one **crew** token move
           from this ship to the ship attacked
-* Belay that order
+* "Belay that order"
     * When this card is revealed, immediately replace the affected **captains card** with the next on the **captains
-      deck**. 
+      deck**.
+* "Arm the Mariners"
+    * Remove the affected **captains card**
+    * Instead, a boarding combat action is executed
+    * This boarding combat is executed as if one more **crew** token was assigned
 
-## Alternative rules
 
-### Alternative movement
-
-If a deterministic way to determine movement distance is wished, one can use the following system:
-
-Depending on the number of sails the ship has left, the ship moves 1 space per full number of crew assigned according 
-to the following table:
-
-| sails | number of crew needed to move one space |
-|-------|-----------------------------------------|
-| 0     | ~ no movement                           |
-| 1     | 6                                       |
-| 2     | 3                                       |
-| 3     | 2                                       |
-| 4     | 1                                       |
-
-Cards that modify the result of the die rolls simply modify the number of sails (treat numbers above 4 as 4 and below 0 as 0).
