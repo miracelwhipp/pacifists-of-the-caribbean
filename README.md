@@ -117,12 +117,12 @@ lose the game.
 
 #### Boarding Combat
 
-These actions are executed simultaneously. For each **boarding combat action** the player on this ship rolls as many
-dice as
-**crew** tokens are assigned to that action. Every **4**, **5** and **6** rolled counts as one _success_. Count the number
-of _successes_. These are the number of casualties. After every player determined the number of casualties for their
-boarding actions, the casualties are removed from the ships on the side of the boarding actions. Remove casualties first
-from the side facing the attacking ship and from the other side afterwards.
+These actions are executed simultaneously. **Boarding combat actions** that are on a side where there is at least one 
+**sea** tile present are skipped. For each **boarding combat action** left the player on this ship rolls as many
+dice as **crew** tokens are assigned to that action. Every **4**, **5** and **6** rolled counts as one _success_. Count the number
+of _successes_. These are the number of casualties the opposing ship takes. After every player determined the number of 
+casualties for their boarding actions, the casualties are removed from the ships on the side of the boarding actions. 
+Remove casualties first from the side facing the attacking ship and from the other side afterwards.
 
 Should a ship run out of **crew** tokens now, the players lose the game.
 
@@ -175,6 +175,9 @@ If this was the last round of the game, the players win with the sum of **crew**
 ### Player Actions
 
 * "The Other Starboard"
+  * Switch Captains Cards
+  * Crew stays at their side
+* Wrong Side
     * the captains card changes its direction
     * It is executed as if it was played on the other side
       * The crew used is from its original side
@@ -185,26 +188,39 @@ If this was the last round of the game, the players win with the sum of **crew**
 * There will be Grog
     * Evaluate action as if there is one more **crew** token assigned
 * further
-    * The range of the artillery card is increased by 3
-    * no effect on non-artillery actions
+    * When played on artillery action
+      * The range of the artillery card is increased by 3
+    * When played on boarding combat
+      * Detach!
+        * in the movement phase add one **sea** tile between this ship and the target of the boarding combat action
+    * no effect on other actions
 * nearer
-    * The range of the artillery card is decreased by 3
-    * no effect on non-artillery actions
+    * When played on artillery action
+      * The range of the artillery card is decreased by 3
+    * When played on boarding combat
+      * Defect (see below)
+    * no effect on other actions
 * There is Grog
     * The crew assigned to this action is halved (rounding down)
 * Both sides
     * The effect of the movement card is applied to both sides of the ship
     * No effect on non-movement cards
 * Defect
-    * can only be played on boarding-actions
+    * when played on boarding-actions
         * instead of producing a casualty, every _success_ of the boarding action will make one **crew** token move
           from this ship to the ship attacked
+    * when played on artillery actions
+      * nearer (see above)
+  * no effect on other actions
 * "Belay that order"
     * When this card is revealed, immediately replace the affected **captains card** with the next on the **captains
       deck**.
 * "Arm the Mariners"
     * Remove the affected **captains card**
     * Instead, a boarding combat action is executed
-    * This boarding combat is executed as if one more **crew** token was assigned
+    * This boarding combat is executed as if one extra **crew** token was assigned
+* Change Ammunition/Sabotage
+  * When resolving this Artillery Action the Player chooses the type of ammunition to use
+  * When played on a Boarding Combat action, the resolved damage targets the sails or hull instead (players choice)
 
 
